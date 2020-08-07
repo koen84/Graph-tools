@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installer for 'Graph-ETH' on 'Ubuntu 18.04'"
+echo "Installer for 'Graph-Turbogeth' on 'Ubuntu 18.04'"
 
 # variables
 useraccount="graph"
@@ -68,5 +68,8 @@ else
 	# TMUX !!
 	git clone --recurse-submodules -j8 https://github.com/ledgerwatch/turbo-geth.git && cd turbo-geth
 	make tg
+	
+	echo -e "Run 'sudo systemctl start turbogeth' & 'sudo systemctl enable turbogeth'"
+	echo "To see how your indexer is doing, run 'sudo journalctl --follow -o cat -u turbogeth' (ctrl+c to stop the logview)."
 
 fi

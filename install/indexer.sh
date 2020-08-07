@@ -14,7 +14,7 @@ if [ $USER != "$useraccount" ]; then
 	fi
 	
 	# packages
-	apt-get install -y build-essential pkg-config libssl-dev
+	apt-get install -y build-essential pkg-config libssl-dev libpq-dev
 
 	# user account
 	adduser --disabled-password --gecos "" $useraccount
