@@ -7,6 +7,9 @@ YMMV - use at your own risk
 * need to be run as root / sudo
 * some scripts need to be re-run as new the new user
 
+## Disk size
+* Turbogeth : 641 GiB (actual usage) + approx 200 GB temp space according to docs.  Compressed [snapshot](https://github.com/koen84/Graph-tools/blob/master/snapshots/turbogeth-200805-data.mdb.xz.torrent) is 250 GiB.
+* Openethereum : estimated at almost 5TB.  Needs to be SSD or won't catch up.
 
 Have fun ^_^
 
