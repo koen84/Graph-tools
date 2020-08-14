@@ -31,7 +31,10 @@ cd $HOME/graph-node
 cargo run -p graph-node --release -- \\
   --postgres-url postgresql://postgres:$psql_pwd@localhost:5432/graph-node \\
   --ethereum-rpc $ethrpc \\
-  --ipfs https://testnet.thegraph.com/ipfs/
+  --ipfs https://testnet.thegraph.com/ipfs/ \\
+  --node-id graph_node1
 EOD
 
 chmod +x $HOME/run_graph.sh
+
+echo -e "If you want to access this postgres remotely edit :\n * /etc/postgresql/12/main/postgresql.conf with the appropriate listen_addresses\n * /etc/postgresql/12/main/pg_hba.conf with the corresponding host entries."

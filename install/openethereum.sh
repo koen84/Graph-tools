@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installer for 'Graph-ETH' on 'Ubuntu 18.04'"
+echo "Installer for 'Graph-OpenEthereum' on 'Ubuntu 18.04'"
 
 # variables
 useraccount="graph"
@@ -67,12 +67,12 @@ LimitNPROC=65536
 [Install]
 WantedBy=multi-user.target
 EOD
-
+	
 	# switch user
 	echo "login as $gebruiker by running 'su $gebruiker' and start script again"
 	su $useraccount
 	exit 0
-
+	
 else
 	
 	# download openethereum
@@ -80,10 +80,10 @@ else
 	cd oe
 	wget https://github.com/openethereum/openethereum/releases/download/v3.0.1/openethereum-linux-v3.0.1.zip
 	unzip openethereum-linux-v3.0.1.zip
-	chmod +x ethkey
-	chmod +x ethstore
-	chmod +x openethereum
-	chmod +x openethereum-evm
+	chmod +x oe/ethkey
+	chmod +x oe/ethstore
+	chmod +x oe/openethereum
+	chmod +x oe/openethereum-evm
 	
 	echo -e "Run 'sudo systemctl start openethereum' & 'sudo systemctl enable openethereum'"
 	echo "To see how your indexer is doing, run 'sudo journalctl --follow -o cat -u openethereum' (ctrl+c to stop the logview)."

@@ -26,7 +26,7 @@ After=network-online.target
 [Service]
 User=$useraccount
 WorkingDirectory=/home/$useraccount/
-ExecStart=/home/$useraccount/turbo-geth/build/bin/rpcdaemon --chaindata $useraccount/.local/share/turbogeth/tg/chaindata/ --http.api=eth,debug --http.addr=$(ip route get 1 | head -1 | awk '{print $7}')
+ExecStart=/home/$useraccount/turbo-geth/build/bin/rpcdaemon --chaindata /home/$useraccount/.local/share/turbogeth/tg/chaindata/ --http.api=eth,debug --http.addr=$(ip route get 1 | head -1 | awk '{print $7}')
 StandardOutput=journal
 StandardError=journal
 Restart=always
