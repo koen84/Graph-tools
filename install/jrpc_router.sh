@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installer for 'Graph-JRPC' on 'Ubuntu 18.04'"
-echo "Code installed is written by @specled"
+echo "Code installed is written by @speckled"
 echo "Will install without --cachedir to allow for easy reconfigurations."
 
 # variables
