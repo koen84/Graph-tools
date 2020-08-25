@@ -7,6 +7,16 @@ YMMV - use at your own risk
 * need to be run as root / sudo
 * some scripts need to be re-run as new the new user
 * openethereum has a routine for creating a stripe array and mounting it, which is disabled by default (as it makes several assumptions)
+* some config needs to be done manual still, pointers via echo or comments
+* different scripts can be run on the same or on different servers
+
+## Subgraphs
+* used for creating and deploying respective subgraphs via httpie
+
+## Extras
+* useful little snippets, need to be run on corresponding server
+* postgres backup can be run manual or via cron, needs read access to all databases
+
 
 ## Disk size
 * Turbogeth : 641 GiB (actual usage) + approx 200 GB temp space according to docs.  Compressed [snapshot](https://github.com/koen84/Graph-tools/blob/master/snapshots/turbogeth-200805-data.mdb.xz.torrent) is 250 GiB.
