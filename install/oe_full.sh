@@ -22,7 +22,9 @@ if [ $USER != "$useraccount" ]; then
 	# packages
 	apt-get install unzip
 	
-		# create unitfile
+	# create unitfile
+	# --base-path=$HOME/data
+	# Warning: Warp Sync is disabled because tracing is turned on.
 	tee "/etc/systemd/system/$unitname.service" <<EOD
 [Unit]
 Description=ETH full node (openethereum)
@@ -31,7 +33,7 @@ After=network-online.target
 [Service]
 User=$useraccount
 WorkingDirectory=/home/$useraccount/
-ExecStart=/home/$useraccount/oe/openethereum --pruning=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports
+ExecStart=/home/$useraccount/oe/openethereum --pruning=fast --pruning-history=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-periodic-snapshot --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports
 StandardOutput=journal
 StandardError=journal
 Restart=always
@@ -55,12 +57,18 @@ else
 	# download openethereum
 	mkdir oe
 	cd oe
-	wget https://github.com/openethereum/openethereum/releases/download/v3.0.1/openethereum-linux-v3.0.1.zip
-	unzip openethereum-linux-v3.0.1.zip
-	chmod +x ethkey
-	chmod +x ethstore
-	chmod +x openethereum
-	chmod +x openethereum-evm
+	# # version 3.0
+	# wget https://github.com/openethereum/openethereum/releases/download/v3.0.1/openethereum-linux-v3.0.1.zip
+	# unzip openethereum-linux-v3.0.1.zip
+	# chmod +x ethkey
+	# chmod +x ethstore
+	# chmod +x openethereum
+	# chmod +x openethereum-evm
+	
+	# version 2.5
+	wget https://releases.parity.io/ethereum/v2.5.13/x86_64-unknown-linux-gnu/parity
+	chmod +x parity
+	
 	
 	echo -e "Run 'sudo systemctl start $unitname' & 'sudo systemctl enable $unitname'"
 	echo "To see how your indexer is doing, run 'sudo journalctl --follow -o cat -u $unitname' (ctrl+c to stop the logview)."
