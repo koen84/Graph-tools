@@ -34,7 +34,7 @@ After=network-online.target
 User=$useraccount
 WorkingDirectory=/home/$useraccount/
 #ExecStart=/home/$useraccount/oe/openethereum --pruning=fast --pruning-history=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-periodic-snapshot --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports
-ExecStart=/home/$useraccount/oe/parity --pruning=fast --pruning-history=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-periodic-snapshot --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports
+ExecStart=/home/$useraccount/oe/parity --pruning=fast --pruning-history=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-periodic-snapshot --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports --bootnodes enode://68f46370191198b71a1595dd453c489bbfe28036a9951fc0397fabd1b77462930b3c5a5359b20e99677855939be47b39fc8edcf1e9ff2522a922b86d233bf2df@144.217.153.76:30303,enode://ffed6382e05ee42854d862f08e4e39b8452c50a5a5d399072c40f9a0b2d4ad34b0eb5312455ad8bcf0dcb4ce969dc89a9a9fd00183eaf8abf46bbcc59dc6e9d5@51.195.3.238:30303
 StandardOutput=journal
 StandardError=journal
 Restart=always
