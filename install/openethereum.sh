@@ -46,7 +46,10 @@ if [ $USER != "$useraccount" ]; then
 	# packages
 	apt-get install unzip
 	
-		# create unitfile
+	# create unitfile
+	# --base-path=$HOME/data
+	# mv 906a34e69aec8c0d/ $HOME/data/chains/ethereum/db/
+	echo "Cache of 58000 intented for a server with 62GB RAM"
 	tee "/etc/systemd/system/openethereum.service" <<EOD
 [Unit]
 Description=ETH archive node (openethereum)
@@ -55,7 +58,7 @@ After=network-online.target
 [Service]
 User=$useraccount
 WorkingDirectory=/home/$useraccount/
-ExecStart=/home/$useraccount/oe/openethereum --pruning=archive --no-warp --db-compaction=ssd --cache-size-db=15360
+ExecStart=/home/$useraccount/oe/openethereum --pruning=archive --tracing=on --no-warp --db-compaction=ssd --mode=active --no-periodic-snapshot --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=58000
 StandardOutput=journal
 StandardError=journal
 Restart=always
