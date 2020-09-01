@@ -64,6 +64,7 @@ StandardError=journal
 Restart=always
 RestartSec=3
 StartLimitInterval=0
+TimeoutStopSec=18000
 LimitNOFILE=65536
 LimitNPROC=65536
 
