@@ -53,7 +53,7 @@ WantedBy=multi-user.target
 EOD
 	
 	# switch user
-	echo "login as $gebruiker by running 'su $gebruiker' and start script again"
+	echo "login as $useraccount by running 'su $useraccount' and start script again"
 	su $useraccount
 	exit 0
 
