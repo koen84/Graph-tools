@@ -33,7 +33,8 @@ After=network-online.target
 [Service]
 User=$useraccount
 WorkingDirectory=/home/$useraccount/
-ExecStart=/home/$useraccount/oe/openethereum --pruning=fast --pruning-history=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-periodic-snapshot --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports
+#ExecStart=/home/$useraccount/oe/openethereum --pruning=fast --pruning-history=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-periodic-snapshot --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports
+ExecStart=/home/$useraccount/oe/parity --pruning=fast --pruning-history=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-periodic-snapshot --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports
 StandardOutput=journal
 StandardError=journal
 Restart=always
