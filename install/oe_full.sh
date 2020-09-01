@@ -5,7 +5,7 @@ echo "Will install with '--config non-standard-ports' as parameter"
 
 # variables
 useraccount="oefull"
-blockstart=10400000
+blockstart=10760000
 unitname=oefull
 
 if [ $USER != "$useraccount" ]; then
@@ -31,12 +31,13 @@ After=network-online.target
 [Service]
 User=$useraccount
 WorkingDirectory=/home/$useraccount/
-ExecStart=/home/$useraccount/oe/openethereum --db-compaction=ssd --cache-size-db=15360 --config non-standard-ports --warp-barrier $blockstart
+ExecStart=/home/$useraccount/oe/openethereum --pruning=2048 --tracing=on --warp-barrier=$blockstart --db-compaction=ssd --mode=active --no-serve-light --min-peers=100 --max-peers=250 --jsonrpc-interface=all --no-ws --no-ipc --cache-size=20000  --config=non-standard-ports
 StandardOutput=journal
 StandardError=journal
 Restart=always
 RestartSec=3
 StartLimitInterval=0
+TimeoutStopSec=18000
 LimitNOFILE=65536
 LimitNPROC=65536
 
