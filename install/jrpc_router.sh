@@ -63,9 +63,9 @@ else
   --logfile /tmp/jrpcd.log \\
   --loglevel debug \\
   -b http://135.181.3.217:8545/ \\
-  -b infura=https://mainnet.infura.io/v3/287fcc180bfb47838a66ee56dbcbc4f0 \\
+  -b infura=$eth_rpc \\
   -r "infura=match:eth_getBlockByNumber*" \\
-  -b infura2=https://mainnet.infura.io/v3/287fcc180bfb47838a66ee56dbcbc4f0 \\
+  -b infura2=$eth_rpc \\
   -r "infura2=match:net_version*"
 EOD
 
