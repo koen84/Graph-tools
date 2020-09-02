@@ -4,7 +4,7 @@ echo "Installer for 'Graph-Turbogeth' on 'Ubuntu 18.04'"
 
 # variables
 useraccount="graph"
-
+commitid="050ef87"
 
 if [ $USER != "$useraccount" ]; then
 
@@ -39,12 +39,14 @@ After=network-online.target
 [Service]
 User=$useraccount
 WorkingDirectory=/home/$useraccount/
-ExecStart=/home/$useraccount/turbo-geth/build/bin/tg
+#ExecStart=/home/$useraccount/turbo-geth/build/bin/tg
+ExecStart=/home/turbogeth/turbo-geth/build/bin/tg --datadir /home/$useraccount/data/ --private.api.addr=localhost:9090
 StandardOutput=journal
 StandardError=journal
 Restart=always
 RestartSec=3
 StartLimitInterval=0
+TimeoutStopSec=3600
 LimitNOFILE=65536
 LimitNPROC=65536
 
@@ -67,6 +69,7 @@ else
 	# compile from github
 	# TMUX !!
 	git clone --recurse-submodules -j8 https://github.com/ledgerwatch/turbo-geth.git && cd turbo-geth
+	if [ -n "$commitid"]; then git checkout $commitid; fi
 	make tg
 	
 	echo -e "Run 'sudo systemctl start turbogeth' & 'sudo systemctl enable turbogeth'"
