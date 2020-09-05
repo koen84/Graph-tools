@@ -4,7 +4,7 @@ echo "Installer for 'Graph-Turbogeth' on 'Ubuntu 18.04'"
 
 # variables
 useraccount="graph"
-commitid="050ef87"
+commitid="v2020.09.01"
 
 if [ $USER != "$useraccount" ]; then
 
