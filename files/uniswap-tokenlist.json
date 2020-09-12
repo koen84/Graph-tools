@@ -17,7 +17,7 @@
       "description": "Protocol native tokens for the Graph, free floating value."
     }
   },
-  "timestamp": "2020-09-12T00:00:00+00:00",
+  "timestamp": "2020-09-12T04:00:00+00:00",
   "tokens": [
     {
       "chainId": 4,
@@ -44,7 +44,7 @@
   ],
   "version": {
     "major": 1,
-    "minor": 0,
-    "patch": 3
+    "minor": 1,
+    "patch": 0
   }
 }
