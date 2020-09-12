@@ -38,13 +38,13 @@
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/koen84/Graph-tools/master/files/GRT64.png",
       "tags": [
-        "compound"
+        "staking"
       ]
     }
   ],
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 1
+    "patch": 2
   }
 }
