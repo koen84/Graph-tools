@@ -1,0 +1,50 @@
+{
+  "name": "Koen MissionControl List",
+  "logoURI": "https://raw.githubusercontent.com/koen84/Graph-tools/master/files/MHS256.png",
+  "keywords": [
+    "The Graph",
+    "Mission Control",
+	"testnet",
+    "special tokens"
+  ],
+  "tags": {
+    "stablecoin": {
+      "name": "Graph stablecoin",
+      "description": "Tokens that earn interest on The Graph, pegged to USD."
+    },
+    "grt": {
+      "name": "Graph native token",
+      "description": "Protocol native tokens for the Graph, free floating value."
+    }
+  },
+  "timestamp": "2020-09-12T00:00:00+00:00",
+  "tokens": [
+    {
+      "chainId": 4,
+      "address": "0xe51aff808f512627166f4eda2c8c682f153024ba",
+      "symbol": "GDAI",
+      "name": "GRT stablecoin",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/koen84/Graph-tools/master/files/GDAI64.png",
+      "tags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chainId": 4,
+      "address": "0xa416a7974c2ff62ffa69b2aa8cef78b72326916a",
+      "symbol": "GRT",
+      "name": "GRT protocol coin",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/koen84/Graph-tools/master/files/GRT64.png",
+      "tags": [
+        "compound"
+      ]
+    }
+  ],
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
