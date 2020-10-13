@@ -32,7 +32,7 @@
     },
     {
       "chainId": 4,
-      "address": "0xa416a7974c2ff62ffa69b2aa8cef78b72326916a",
+      "address": "0x380336f7d6be0bb0d345b1633d4d14b32d95530f",
       "symbol": "GRT",
       "name": "GRT protocol coin",
       "decimals": 18,
@@ -43,7 +43,7 @@
     }
   ],
   "version": {
-    "major": 2,
+    "major": 3,
     "minor": 0,
     "patch": 0
   }
