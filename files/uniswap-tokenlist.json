@@ -21,7 +21,7 @@
   "tokens": [
     {
       "chainId": 4,
-      "address": "0xa696f745f16acc9839a290227bd7dba925ca7155",
+      "address": "0xFb49BDaA59d4B7aE6260D22b7D86e6Fe94031b82",
       "symbol": "GDAI",
       "name": "GRT stablecoin",
       "decimals": 18,
@@ -32,7 +32,7 @@
     },
     {
       "chainId": 4,
-      "address": "0x380336f7d6be0bb0d345b1633d4d14b32d95530f",
+      "address": "0x496eec523c74c4BbF071e0c75573c9deb07929f4",
       "symbol": "GRT",
       "name": "GRT protocol coin",
       "decimals": 18,
@@ -43,7 +43,7 @@
     }
   ],
   "version": {
-    "major": 4,
+    "major": 5,
     "minor": 0,
     "patch": 0
   }
