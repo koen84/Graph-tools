@@ -1,6 +1,10 @@
-# Graph-tools
+# Graph-tools (ARCHIVED)
 Tools for Mission Control, aimed at running baremetal on Ubuntu 18.04 LTS.
 YMMV - use at your own risk
+
+## ARCHIVED
+This repo is now for historical purposes.  The installers are outdated for the current mainnet & testnet.  Please refer to the new [Graph Install Suite](https://github.com/MindHeartSoul/Graph-InstallSuite) instead.
+Some files in this repo might still be relevant : e.g. [grafana indexer dashboard modification](https://github.com/koen84/Graph-tools/blob/master/files/indexing-status_not-removed.json), [postgres backup script](https://github.com/koen84/Graph-tools/blob/master/extras/postgres_backup.sh) & [CLI subgraph overview](https://github.com/koen84/Graph-tools/blob/master/extras/subgraph_overview.sh)
 
 ## Install scripts
 * create a fresh non-sudo user
